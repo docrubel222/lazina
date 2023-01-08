@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Lover Lazina</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box; font-family: Arial;}
+        body{
+            background: rgb(131,58,180);
+            background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+            min-height: 100vh;
+        }
+        .container{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+        .box{
+            width: 30%;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px 4%;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            z-index: -1;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        }
+        .box .profile_pic{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 10px auto;
+            display: block;
+            position: relative;
+            border: 5px solid #ddd;
+            box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
+        }
+        .box h1{
+            text-align: center;
+            color: #fff;
+            font-family: 'Bakbak One', cursive;
+            font-size: 30px;
+            color: #f5f5f5;
+            text-shadow: 1px 1px 1px #919191,
+                1px 2px 1px #919191,
+                1px 3px 1px #919191,
+                1px 4px 1px #919191,
+                1px 5px 1px #919191,
+                1px 14px 6px rgba(16,16,16,0.4),
+                1px 16px 10px rgba(16,16,16,0.2),
+                1px 18px 35px rgba(16,16,16,0.2),
+                1px 20px 60px rgba(16,16,16,0.4);
+        }
+        .box h2{
+            margin: 10px 0px 20px 0px;
+            text-align: center;
+            text-decoration: underline;
+        }
+        .box p{
+            margin: 20px 0px;
+            font-size: 14px;
+        }
+        .btn_wrapper{
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .btn{
+            display: inline-block;
+            margin: 0 auto;
+            text-decoration: none;
+        }
+        .button-29 {
+            align-items: center;
+            appearance: none;
+            background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+            border: 0;
+            border-radius: 6px;
+            box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+            box-sizing: border-box;
+            cursor: pointer;
+            display: inline-block;
+            color: #fff;
+            margin: 0 auto;
+            height: 48px;
+            justify-content: center;
+            line-height: 1;
+            list-style: none;
+            overflow: hidden;
+            padding-left: 16px;
+            padding-right: 16px;
+            position: relative;
+            text-align: center;
+            transition: box-shadow .15s,transform .15s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            white-space: nowrap;
+            will-change: box-shadow,transform;
+            font-size: 18px;
+        }
+        .button-29:focus {
+            box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+        }
+
+        .button-29:hover {
+            box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+            transform: translateY(-2px);
+            background-image: radial-gradient(100% 140% at 70% 0, #5adaff 0, #5468ff 100%);
+        }
+        .button-29:active {
+            box-shadow: #3c4fe0 0 3px 7px inset;
+            transform: translateY(2px);
+        }
+        @media (max-width: 450px) {
+        .container{
+            display: block;
+            padding: 0;
+            height: 0;
+            top: 0;
+        } 
+        .box{
+            width: 80%;
+            margin: 30px auto;
+        }   
+        }
+        @media (min-width: 451px) and (max-width: 768px) {
+        .container{
+            display: block;
+            padding: 5px;
+            height: 0;
+            top: 0;
+        } 
+        .box{
+            width: 80%;
+            margin: 30px auto;
+        }
+        }
+        @media (min-width: 769px) and (max-width: 1024px) {
+        .container{
+            display: block;
+            padding: 0;
+            height: 0;
+            top: 0;
+        } 
+        .box{
+            display: inline-block;
+            width: 40%;
+        }
+        }
+    </style>
+    <!-- Script -->
+    <script>
+
+        var bits=200; // how many bits
+        var speed=5; // how fast - smaller is faster
+        var bangs=15; // how many can be launched simultaneously (note that using too many can slow the script down)
+        var colours=new Array("#03f", "#f03", "#0e0", "#93f", "#0cf", "#f93", "#f0c");
+        
+        var bangheight=new Array();
+        var intensity=new Array();
+        var colour=new Array();
+        var Xpos=new Array();
+        var Ypos=new Array();
+        var dX=new Array();
+        var dY=new Array();
+        var stars=new Array();
+        var decay=new Array();
+        var swide=800;
+        var shigh=600;
+        var boddie;
+        window.onload=function() { if (document.getElementById) {
+          var i;
+          boddie=document.createElement("div");
+          boddie.style.position="fixed";
+          boddie.style.top="0px";
+          boddie.style.left="0px";
+          boddie.style.overflow="visible";
+          boddie.style.width="1px";
+          boddie.style.height="1px";
+          boddie.style.backgroundColor="transparent";
+          document.body.appendChild(boddie);
+          set_width();
+          for (i=0; i<bangs; i++) {
+            write_fire(i);
+            launch(i);
+            setInterval('stepthrough('+i+')', speed);
+          }
+        }}
+        function write_fire(N) {
+          var i, rlef, rdow;
+          stars[N+'r']=createDiv('|', 12);
+          boddie.appendChild(stars[N+'r']);
+          for (i=bits*N; i<bits+bits*N; i++) {
+            stars[i]=createDiv('*', 13);
+            boddie.appendChild(stars[i]);
+          }
+        }
+        function createDiv(char, size) {
+          var div=document.createElement("div");
+          div.style.font=size+"px monospace";
+          div.style.position="absolute";
+          div.style.backgroundColor="transparent";
+          div.appendChild(document.createTextNode(char));
+          return (div);
+        }
+        function launch(N) {
+          colour[N]=Math.floor(Math.random()*colours.length);
+          Xpos[N+"r"]=swide*0.5;
+          Ypos[N+"r"]=shigh-5;
+          bangheight[N]=Math.round((0.5+Math.random())*shigh*0.4);
+          dX[N+"r"]=(Math.random()-0.5)*swide/bangheight[N];
+          if (dX[N+"r"]>1.25) stars[N+"r"].firstChild.nodeValue="/";
+          else if (dX[N+"r"]<-1.25) stars[N+"r"].firstChild.nodeValue="\\";
+          else stars[N+"r"].firstChild.nodeValue="|";
+          stars[N+"r"].style.color=colours[colour[N]];
+        }
+        function bang(N) {
+          var i, Z, A=0;
+          for (i=bits*N; i<bits+bits*N; i++) {
+            Z=stars[i].style;
+            Z.left=Xpos[i]+"px";
+            Z.top=Ypos[i]+"px";
+            if (decay[i]) decay[i]--;
+            else A++;
+            if (decay[i]==15) Z.fontSize="7px";
+            else if (decay[i]==7) Z.fontSize="2px";
+            else if (decay[i]==1) Z.visibility="hidden";
+            Xpos[i]+=dX[i];
+            Ypos[i]+=(dY[i]+=1.25/intensity[N]);
+          }
+          if (A!=bits) setTimeout("bang("+N+")", speed);
+        }
+        function stepthrough(N) {
+          var i, M, Z;
+          var oldx=Xpos[N+"r"];
+          var oldy=Ypos[N+"r"];
+          Xpos[N+"r"]+=dX[N+"r"];
+          Ypos[N+"r"]-=4;
+          if (Ypos[N+"r"]<bangheight[N]) {
+            M=Math.floor(Math.random()*3*colours.length);
+            intensity[N]=5+Math.random()*4;
+            for (i=N*bits; i<bits+bits*N; i++) {
+              Xpos[i]=Xpos[N+"r"];
+              Ypos[i]=Ypos[N+"r"];
+              dY[i]=(Math.random()-0.5)*intensity[N];
+              dX[i]=(Math.random()-0.5)*(intensity[N]-Math.abs(dY[i]))*1.25;
+              decay[i]=16+Math.floor(Math.random()*16);
+              Z=stars[i];
+              if (M<colours.length) Z.style.color=colours[i%2?colour[N]:M];
+              else if (M<2*colours.length) Z.style.color=colours[colour[N]];
+              else Z.style.color=colours[i%colours.length];
+              Z.style.fontSize="13px";
+              Z.style.visibility="visible";
+            }
+            bang(N);
+            launch(N);
+          }
+          stars[N+"r"].style.left=oldx+"px";
+          stars[N+"r"].style.top=oldy+"px";
+        }
+        window.onresize=set_width;
+        function set_width() {
+          var sw_min=999999;
+          var sh_min=999999;
+          if (document.documentElement && document.documentElement.clientWidth) {
+            if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+            if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+          }
+          if (typeof(self.innerWidth)!="undefined" && self.innerWidth) {
+            if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+            if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+          }
+          if (document.body.clientWidth) {
+            if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+            if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+          }
+          if (sw_min==999999 || sh_min==999999) {
+            sw_min=800;
+            sh_min=600;
+          }
+          swide=sw_min;
+          shigh=sh_min;
+        }
+        
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="left box">
+            <img src="https://scontent.fdac138-1.fna.fbcdn.net/v/t39.30808-1/318021219_600820392043659_3895862737001554536_n.jpg?stp=dst-jpg_s320x320&_nc_cat=105&ccb=1-7&_nc_sid=7206a8&_nc_ohc=jiAljHfEW2EAX8gwvky&_nc_ht=scontent.fdac138-1.fna&oh=00_AfAjqjWyWI19gfNsnDTg89DsmRxhP40Lu2icMp4uDX2MgA&oe=63BF2808" alt="Ahona Jannat Profile Pic" class="profile_pic">
+            <h1>Lazina Mostafa</h1>
+            <h2>My Duties</h2>
+            <p>১) খুব সকালে ঘুম থেকে উঠা</p>
+            <p>২) নিয়মিত নামাজ পড়া</p>
+            <p>৩) বিড়ালকে খুব ভালোবাসা</p>
+            <p>৪) টিয়া পাখির মায়ায় পড়া</p>
+            <p>৫) মাঝে মধ্যে একটু টাইম পাস করা</p>
+            <div class="btn_wrapper">
+                <a href="https://www.facebook.com/SaDIA.ISlaM.552" target="_blank" class="btn">
+                    <button class="button-29" role="button">My Facebook</button>
+                </a>
+            </div>
+        </div>               
+    </div>
+</body>
+</html>
